@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>page de registre</title>
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li class="logo"><img src="./assets/coclockworking.png" aria-label="accueil du site"
+                    alt="logo entreprise"><span class="title_menu">Co'Clock Working</span></li>
+            <nav class="navbar">
+                <a href="../index.html">Accueil</a>
+                <a href="./reservation.html">Réservations</a>
+                <a href="./spaces.html">Espaces</a>
+                <a href="./login.html">Se connecter</a>
+            </nav>
+            <div class="menu-burger">
+                <i class="fa-solid fa-bars"></i>
+
+        </ul>
+    </header>
+    <main aria-labelledby="espace Bora">
+
+        <h1>Open space Bora</h1>
+        <img class="open_space_img" src="./assets/blue-sea.jpg" alt="mon espace">
+
+        <section class="space" aria-label="information de l'espace">
+            <p>
+
+                <b>Capacité</b>
+                20 personnes
+            </p>
+            <p>
+                <b>Equipements</b>
+                4 écrans 4 projecteurs 4 casques 4 micros
+            <p>
+                <b>Prix</b>
+                200€ la journée
+            </p>
+
+
+
+            </p>
+
+
+
+        </section>
+        <section class="comments" aria-labelledby="Commentaires sur l'espace">
+            <h3 id="comment_title">Commentaires</h3>
+            <div aria-labelledby="Comment-1">
+                <h4 id="commet-1">Commentaire sur l'espace Bora</h4>
+                <i>Posté le <time datetime="2024-06-28">28/06/2024</time></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Maxime, illo velit! Minus sint accusantium accusamus nemo
+                    expedita aliquid. Numquam eius dolores repellendus. Optio
+                    omnis dolorum quo eveniet commodi quis similiq</p>
+            </div>
+
+        </section>
+        <form action="/" aria-labelledby="form-title">
+            <h3 id="" form-title>Ajouter un commentaire</h3>
+            <label for="comment">texte du commentaire</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="commenter" />
+        </form>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+
+GET http://0.0.0.0:8055/items/Space/3
+
+###
+
+GET http://0.0.0.0:8055/items/Space
+
+
+###
+
+GET http://0.0.0.0:8055/items/User
+
+
+###
+POST http://0.0.0.0:8055/auth/login
+content-type: application/json
+
+{
+
+    "email": "gab@io.com",
+    "password": "alix"
+}
+###
+GET http://0.0.0.0:8055/items/Space?fields=name
+
+###
+GET http://0.0.0.0:8055/items/User?filter[id][_eq]=2
+
+###
+GET  http://0.0.0.0:8055/items/Comment
+Content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiNWE2OGNhLWI2YjEtNGFmOC04MTQ0LTczNjRkNjFiMmYyMiIsInJvbGUiOiJlODJhM2U5Zi1iZDdiLTQyMDYtOTJkYy1hZjA3NGRkMWNhYzMiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTcyMDE3OTA2OSwiZXhwIjoxNzIwMTc5OTY5LCJpc3MiOiJkaXJlY3R1cyJ9.ibAXVEOCd-EoYQXzoI9PzEMjgIBirq8Jpwv6MTyVL7E
+
+###
+
+GET  http://0.0.0.0:8055/items/Booking
+Content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiNWE2OGNhLWI2YjEtNGFmOC04MTQ0LTczNjRkNjFiMmYyMiIsInJvbGUiOiJlODJhM2U5Zi1iZDdiLTQyMDYtOTJkYy1hZjA3NGRkMWNhYzMiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTcyMDE3OTA2OSwiZXhwIjoxNzIwMTc5OTY5LCJpc3MiOiJkaXJlY3R1cyJ9.ibAXVEOCd-EoYQXzoI9PzEMjgIBirq8Jpwv6MTyVL7E
+
+###
+
+POST http://0.0.0.0:8055/items/Comment
+Content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiNWE2OGNhLWI2YjEtNGFmOC04MTQ0LTczNjRkNjFiMmYyMiIsInJvbGUiOiJlODJhM2U5Zi1iZDdiLTQyMDYtOTJkYy1hZjA3NGRkMWNhYzMiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTcyMDE4MjkxMiwiZXhwIjoxNzIwMTgzODEyLCJpc3MiOiJkaXJlY3R1cyJ9.pmiu-3fQaa3WdDTeR1TnMOIs3UBfDm4nZkIJWE25uE8
+
+
+{
+   "title":"mon cinquième commentaire",
+   "description":"Comment faire avec les users",
+   "rate":4,
+   "space_id":2
+}
+
+###

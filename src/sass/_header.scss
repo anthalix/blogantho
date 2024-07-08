@@ -1,0 +1,145 @@
+header {
+
+    
+    background-image: url(..//assets/canva.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    margin-bottom: 30px;
+    img {
+        height: 70px;
+      }
+
+    .menu {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .title_menu {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .navbar a {
+        color: black;
+        margin: 10px;
+        transition: 0.5s;
+    }
+
+    .navbar a:hover {
+        text-shadow: 2px 2px 2px grey;
+    }
+
+    .menu-burger {
+        display: none;
+
+    }
+}
+
+@media screen and (max-width: 783px){
+header{
+    .title_menu {
+
+        font-size: 1.5rem;
+      }
+    
+      .navbar {
+    
+        margin-top: -100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25%;
+        height: auto;
+        background-color: rgba(202, 199, 199, 0.781);
+    
+        display: flex;
+        flex-direction: column;
+    
+      }
+    
+      .menu-burger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+      }
+    
+      i.fa-solid.fa-bars {
+        font-size: 50px;
+      }
+    
+      .navbar.mobile-menu {
+    
+        margin-top: 75px;
+        height: 35%;
+        justify-content: space-between;
+        font-weight: bold;
+        
+    
+      }
+
+}}
+
+@media screen and (max-width: 530px) {
+header {
+        width: 100%;
+        margin-bottom: 30px;
+        height: 250px;
+
+        .title_menu {
+
+            font-size: 1rem;
+        }
+
+        .navbar {
+
+            margin-top: -100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            background-color: rgba(202, 199, 199, 0.781);
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar.mobile-menu {
+
+            margin-top: 75px;
+            width: 40%;
+            height: 24%;
+            
+        }
+
+        i.fa-solid.fa-bars {
+            font-size: 50px;
+            margin-left: auto;
+        }
+
+        .menu-burger {
+            display: flex;
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            color: inherit;
+        }
+
+        
+}}

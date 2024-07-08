@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>page de registre</title>
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li class="logo"><img src="./assets/coclockworking.png" aria-label="accueil du site"
+                    alt="logo entreprise"><span class="title_menu">Co'Clock Working</span></li>
+            <nav class="navbar">
+                <a href="../index.html">Accueil</a>
+                <a href="./reservation.html">Réservations</a>
+                <a href="./spaces.html">Espaces</a>
+                <a href="./login.html">Se connecter</a>
+            </nav>
+            <div class="menu-burger">
+                <i class="fa-solid fa-bars"></i>
+
+        </ul>
+    </header>
+
+
+    <h1>S'enregister</h1>
+
+    <div class=" alert success" style="display:none;">
+        <p> Inscription réussie</p>
+
+    </div>
+
+
+    <div class=" alert error" style="display:none;">
+        <p> Erreur lors de l'inscription</p>
+
+    </div>
+
+    <form class="register" action="#" aria-label="informations register">
+        <div>
+            <label for="name">Nom</label>
+            <label for="firstname">Prénom</label>
+
+            <input required type="text" placeholder="ex Dupont" name="name" id="name" />
+
+            <input required type="text" placeholder="ex Michel" name="firstname" id="firstname" />
+
+
+
+        </div>
+
+        <label for="" email">Email</label>
+        <input required type="email" id="email" name="email" placeholder="ex : m.dupont@monmail.com" />
+
+        <label for="password">Mot de passe</label>
+        <input required type="password" id="password" name="password" placeholder="******"  />
+
+        <input type="submit" class="button" value="Créer un compte" />
+
+
+
+    </form>
+    <script>
+        function aDesCaractèresSpéciaux(valeurAVerifier) {
+
+            const lesCaractereSpeciaux = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+            return lesCaractereSpeciaux.test(valeurAVerifier);
+        }
+
+        function estUneAdresseEmail(valeurAVerifier) {
+
+            const formatEmail = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
+            return formatEmail.test(valeurAVerifier);
+
+
+        }
+
+        function estUnMotDePasse(valeurAVerifier) {
+            if (valeurAVerifier.length < 8 || valeurAVerifier > 16) {
+                return false;
+            }
+            const maj = valeurAVerifier.match(/[A-Z]/g);
+            if (maj === null || maj.lenght < 1) {
+              return false;
+            }
+            const min = valeurAVerifier.match(/[a-z]/g);
+            if (min === null || min.lenght < 1) {
+                 return false;
+            }
+            const num = valeurAVerifier.match(/[0-9]/g);
+            if (num === null || num.lenght < 1) {
+                 return false;
+            }
+            return true;
+
+        }
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+
+
+            event.preventDefault();
+
+
+            const nom = document.querySelector('#name');
+            const prenom = document.querySelector('#firstname');
+            const email = document.querySelector('#email');
+            
+            const password = document.querySelector('#password');
+            
+            const success = document.querySelector('.success');
+            const error = document.querySelector('.error');
+
+
+
+            if (!aDesCaractèresSpéciaux(nom.value) && !aDesCaractèresSpéciaux(prenom.value) && estUneAdresseEmail(email.value) && estUnMotDePasse(password.value)) {
+
+                success.style.display = "flex";
+
+
+
+            }
+            else {
+
+                error.style.display = "flex";
+            }
+
+
+        })
+
+    </script>
+
+
+
+</body>
+
+<script src="./app.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
